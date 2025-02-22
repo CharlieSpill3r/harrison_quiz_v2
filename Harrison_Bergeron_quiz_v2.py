@@ -16,7 +16,7 @@ def main():
     # Step 1: Concept Checking Question
     step1_key = "Q1_step1"
     if step1_key not in st.session_state:
-        st.session_state[step1_key] = ""
+        st.session_state[step1_key] = "Everyone was the same"
     response1 = st.radio("What does this sentence mean?", ["Everyone was the same", "People were different", "I don't know"], key=step1_key, index=0)
     
     if response1 == "Everyone was the same":
@@ -60,4 +60,3 @@ def compare_answers(student_answer, model_answer):
 
 if __name__ == "__main__":
     main()
-
